@@ -1,0 +1,20 @@
+import random
+
+def main():
+    # Mendeklarasikan variabel
+    pemain = input("Pilih (g)unting, (b)atu, atau (k)ertas: ")
+    komputer = random.choice(["g", "b", "k"])
+
+    # Menghitung hasil
+    if pemain == komputer:
+        hasil = "Seri!"
+    elif (pemain == "g" and komputer == "b") or (pemain == "b" and komputer == "k") or (pemain == "k" and komputer == "g"):
+        hasil = "Pemain menang!"
+    else:
+        hasil = "Komputer menang!"
+
+    # Menampilkan hasil
+    print(f"Pemain memilih {pemain}, komputer memilih {komputer}. Hasil: {hasil}")
+
+if __name__ == "__main__":
+    main()
